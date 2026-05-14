@@ -1,2 +1,5 @@
-# projeto-senac-2026
-projeto criado na turma de desenvolvimento web no SENACRS de POA em 2026
+viajei
+
+o objetivo do projeto *viajei" é, compartilhar das experiências que vivemos, para que outras pessoas  também possam usufruir da mesma experiência. Essas experiências podem ser sobre qualquer tema (livros,séries,filmes,esportes,viagens,cozinha,animes...)
+
+o "Software", por razões apropriadas, é indicado para maiores de 14 anos.
