@@ -4,5 +4,16 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ff0055;
+    background-color: rgb(219, 253, 0);
+    border: 2px solid gold;
+    margin: 0 auto;
+}
+
+img {
+    width: 350px;
+    height: 350px;
+}
+
+body img {
+    margin-left: 40%;
 }
