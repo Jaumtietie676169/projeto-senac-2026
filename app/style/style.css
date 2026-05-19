@@ -27,10 +27,17 @@ header a {
     border-radius: 20px;
 }
 
+/* Remove margens do body para ocupar 100% da tela */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 #container {
-     width: 100%;
-     height: 80vh;
-     background-image: url(../images/diego-ph-5LOhydOtTKU-unsplash.jpg);   
-     background-repeat: no-repeat;
-     background-position: center;
+  width: 100vw;
+  height: 100vh; /* usa toda a altura da tela (viewport) */
+  background: url("../images/tom-barrett-hgGplX3PFBg-unsplash.jpg") center / cover no-repeat;
+  /* opcional: para manter o background fixo ao rolar a página
+     background-attachment: fixed;
+  */
 }
