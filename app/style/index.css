@@ -15,7 +15,7 @@ img {
 }
 
 body img {
-  margin-left: 63%;
+  margin-left: 40%;
 }
 
 header a {
@@ -56,12 +56,16 @@ body {
 
 #container section p {
   color: white;
-  transform: translate(30px, 100px); /* Move 50px no eixo X e 20px no eixo Y */
+  transform: translate(30px, 100px);
+    /* Move 50px no eixo X e 20px no eixo Y */
+  margin: 0;
+  max-width: 80%;
 }
 
 #container section h1 {
   color: white;
-  transform: translate(30px, 100px); /* Move 50px no eixo X e 20px no eixo Y */
+      transform: translate(30px, 100px);
+    /* Move 50px no eixo X e 20px no eixo Y */
 }
 
 @media (max-width: 768px) {
@@ -69,12 +73,13 @@ body {
         margin-left: 0;
         display: block;
         margin: 0 auto;
-            #container section p,
-                transform: translate(0, 100px);
+    }
+    #container section p {
+        transform: translate(0, 100px);
         text-align: center;
+    }
     #container section h1 {
         transform: translate(0, 100px);
         text-align: center;
     }
-             }
-                          }
+}
