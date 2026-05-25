@@ -1,5 +1,5 @@
 header {
-  height: 60;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -9,9 +9,7 @@ header {
 
 img {
   width: 350px;
-  /*Largura da imagem*/
   height: 350px;
-  /*Altura da imagem*/
 }
 
 body img {
@@ -27,23 +25,28 @@ header a {
   padding: 10px 20px;
   background-color: rgb(0, 21, 255);
   border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Remove margens do body para ocupar 100% da tela */
-html,
-body {
+header a:hover {
+  background-color: rgb(30, 60, 255);
+}
+
+html, body {
   height: 100%;
   margin: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 #container {
   width: 100vw;
   height: 100vh;
-  /* usa toda a altura da tela (viewport) */
-  background: url("../images/ChatGPT\ Image\ 21\ de\ mai.\ de\ 2026\,\ 16_38_59.png") center / cover no-repeat;
-  /* opcional: para manter o background fixo ao rolar a página
-     background-attachment: fixed;
-  */
+  background: url("../images/ChocolateBranco.png") center / cover no-repeat;
+  animation: fadeIn 1s ease forwards;
 }
 
 #container section {
@@ -57,29 +60,28 @@ body {
 #container section p {
   color: white;
   transform: translate(30px, 100px);
-    /* Move 50px no eixo X e 20px no eixo Y */
   margin: 0;
   max-width: 80%;
 }
 
 #container section h1 {
   color: white;
-      transform: translate(30px, 100px);
-    /* Move 50px no eixo X e 20px no eixo Y */
+  transform: translate(30px, 100px);
 }
 
 @media (max-width: 768px) {
-    body img {
-        margin-left: 0;
-        display: block;
-        margin: 0 auto;
-    }
-    #container section p {
-        transform: translate(0, 100px);
-        text-align: center;
-    }
-    #container section h1 {
-        transform: translate(0, 100px);
-        text-align: center;
-    }
+  body img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #container section p {
+    transform: translate(0, 100px);
+    text-align: center;
+  }
+
+  #container section h1 {
+    transform: translate(0, 100px);
+    text-align: center;
+  }
 }
