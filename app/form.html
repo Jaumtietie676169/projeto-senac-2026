@@ -2,43 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/form.css">
-    <title>Crie seu blog - Viajei</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajei: Fofoca?!</title>
+  <link rel="stylesheet" href="./style/form.css">
+  <script src="./scripts/form.js" defer></script>
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <a href="./index.html">Viajei</a>
-            <a href="./sobre.html">Sobre</a>
-            <a href="./form.html">Crie seu blog</a>
-        </header>
+  <div id="container">
+    <header>
+      <nav>
+        <a class="link-do-cabecalho" href="./index.html">Viajei</a>
+        <a class="link-do-cabecalho" href="./about.html">Sobre</a>
+        <a class="link-do-cabecalho" href="./form.html">Crie seu blog?!</a>
+      </nav>
+    </header>
 
-        <section>
-            <h1>Crie seu blog</h1>
+    <main>
+      <form id="post-form">
+        <div class="form-box">
+          <h1>TCHÊ TCHÊ?!</h1>
 
-            <div class="form-box">
-                <div class="form-group">
-                    <label for="usuario">Nome</label>
-                    <input type="text" id="usuario" name="nome" placeholder="Seu nome completo">
-                </div>
+          <div class="form-group">
+            <label for="autor">Autor</label>
+            <input id="autor" type="text" name="autor" placeholder="João da Silva">
+          </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="seu@email.com">
-                </div>
+          <div class="form-group">
+            <label for="titulo">Título da história</label>
+            <input id="titulo" type="text" name="titulo" placeholder="Meu nome é Bernardo, e eu sou um bobão">
+          </div>
 
-                <div class="form-group">
-                    <label for="historia">História</label>
-                    <textarea id="historia" name="historia" rows="8" placeholder="Conta sua aventura..."></textarea>
-                </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="tche.silva@example.com">
+          </div>
 
-                <button type="button">Publicar</button>
-            </div>
-        </section>
-    </div>
+          <div class="form-group">
+            <label for="historia">História</label>
+            <textarea id="historia" name="historia" rows="8" placeholder="Conte sua história aqui..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit">Publicar sua história</button>
+      </form>
+    </main>
+
+    <footer>
+      <div id="historias"></div>
+    </footer>
+  </div>
 </body>
 
 </html>
