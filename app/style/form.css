@@ -23,7 +23,7 @@ html, body {
   flex-direction: column;
 }
 
-
+/* ── HEADER E O LINK DO CABEÇALHO DOS GURIE DO PC QUE É DO BEM MAIS OS CARA ACHA QUE É DO MAL PQ SÃO MUITO DO BEM, MAS FARMAM MUITOS 67 E NÃO PEIDAX ── */
 header {
   width: 100%;
   height: 60px;
@@ -40,6 +40,7 @@ nav img {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .link-do-cabecalho {
@@ -48,16 +49,17 @@ nav img {
   text-decoration: none;
   color: white;
   font-size: 15pt;
-  padding: 10px 20px;
+  padding: 10px 24px;
   background-color: rgb(0, 21, 255);
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
+  border-radius: 100px;
+  transition: background-color 0.3s 
 }
 
 .link-do-cabecalho:hover {
   background-color: rgb(30, 60, 255);
 }
 
+/* ── MAIN DOS GURIE DO PC QUE É DO MAL MAIS PODE SER DO BEM ── */
 main {
   flex: 1;
   display: flex;
@@ -65,71 +67,78 @@ main {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  gap: 24px;
+  gap: 20px;
 }
 
+/* ── FORM BOX NORMAL DOS GURIE DO PC ── */
 .form-box {
   width: 100%;
   max-width: 460px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  padding: 32px 28px 28px;
+  border-radius: 0;
+  padding: 24px 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background: rgba(0, 0, 0, 0.25);
+  gap: 14px;
+  background: transparent;
 }
 
 .form-box h1 {
   color: white;
   font-family: system-ui, sans-serif;
-  font-size: 14pt;
+  font-size: 11pt;
   font-weight: 700;
   letter-spacing: 4px;
-  text-align: center;
+  text-transform: uppercase;
   margin-bottom: 4px;
 }
 
+/* ── OS BAGULHO LÁ EM SIMA "CAMPOS ── */
 .form-group {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .form-group label {
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
   font-family: system-ui, sans-serif;
-  font-size: 9pt;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 10pt;
+  white-space: nowrap;
+  padding-top: 10px;
+  min-width: 70px;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.05);
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid white;
+  border-radius: 0;
+  background: transparent;
   color: white;
   font-size: 11pt;
   font-family: system-ui, sans-serif;
   outline: none;
   resize: vertical;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
 }
 
+/* ── BOTÃO FORA DA CAIXINHA DOS GURIE DO MAL QUE NÃO É DO BEM ── */
 button {
   width: 100%;
   max-width: 460px;
@@ -139,8 +148,8 @@ button {
   font-size: 11pt;
   font-family: system-ui, sans-serif;
   font-weight: 600;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
+  border: 2px solid white;
+  border-radius: 100px;
   cursor: pointer;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -152,6 +161,7 @@ button:hover {
   color: black;
 }
 
+/* ── ARTIGO DOS GURIES ── */
 footer {
   padding: 20px;
 }
@@ -168,7 +178,6 @@ footer {
 
 .artigo {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
   padding: 20px 24px;
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -187,7 +196,7 @@ footer {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ── MOBILE ── */
+/* ── PROS MOBILE  ── */
 @media (max-width: 768px) {
   nav {
     flex-wrap: wrap;
@@ -198,10 +207,96 @@ footer {
 
   .link-do-cabecalho {
     font-size: 11pt;
-    padding: 8px 14px;
+    padding: 8px 18px;
   }
 
   .form-box {
-    padding: 24px 16px;
+    padding: 20px 16px;
   }
+
+  .form-group {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .form-group label {
+    padding-top: 0;
+  }
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.aberto {
+  display: flex;
+}
+
+.modal-conteudo {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-family: system-ui, sans-serif;
+  padding: 48px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-conteudo h3 {
+  font-size: 18pt;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.modal-conteudo p {
+  font-size: 12pt;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20pt;
+  cursor: pointer;
+  width: auto;
+  max-width: none;
+  padding: 0;
+  letter-spacing: 0;
+  border-radius: 0;
+}
+
+.modal-fechar:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.artigo {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px 24px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.artigo:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
