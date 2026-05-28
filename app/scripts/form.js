@@ -46,7 +46,7 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-// Fechar ao clicar no X ou fora do conteúdo
+
 overlay.querySelector('.modal-fechar').addEventListener('click', () => {
   overlay.classList.remove('aberto');
 });
@@ -55,7 +55,6 @@ overlay.addEventListener('click', (e) => {
   if (e.target === overlay) overlay.classList.remove('aberto');
 });
 
-// Abrir modal ao clicar no artigo
 document.getElementById('historias').addEventListener('click', (e) => {
   const artigo = e.target.closest('.artigo');
   if (!artigo) return;
