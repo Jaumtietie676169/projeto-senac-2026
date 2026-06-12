@@ -1,0 +1,67 @@
+def obter_elemento(lista, indice):
+    try:
+        return lista[indice]
+    except IndexError:
+        return "Posição num existe pai"
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
