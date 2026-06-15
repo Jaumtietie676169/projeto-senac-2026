@@ -17,22 +17,49 @@ class Admin(Usuario):
 def deletar_banco_de_dados(usuario_objeto):
     if not isinstance(usuario_objeto, Admin):
         raise PermissionError(
-            "Acesso negado! Apenas administradores podem deletar o banco de dados."
-        )
+            "Acesso negado! Apenas administradores podem entrosar.")
 
-    print("Banco de dados deletado com sucesso!")
+    print("você tem dado em casa com sucesso!")
 
 
-# Testes
-admin = Admin()
-comum = Comum()
 
-try:
-    deletar_banco_de_dados(admin)
-except PermissionError as erro:
-    print(erro)
 
-try:
-    deletar_banco_de_dados(comum)
-except PermissionError as erro:
-    print(erro)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

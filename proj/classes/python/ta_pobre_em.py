@@ -1,6 +1,6 @@
 class SaldoInsuficienteError(Exception):
 	def __init__(self, falta):
-		super().__init__(f"Saldo insuficiente: faltam {falta}")
+		super().__init__("Saldo insuficiente: faltam {falta}")
 		self.falta = falta
 
 class ContaBancaria:

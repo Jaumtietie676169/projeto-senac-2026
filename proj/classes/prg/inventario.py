@@ -23,7 +23,7 @@ class Inventario:
 	
 	def guardar_item(self, objeto_item):
 		if len(self.itens) >= 3:
-			raise InventarioCheioException("Inventário cheio!")
+			raise InventarioCheioException("Inventário lotado pai!")
 		if isinstance(objeto_item, PedraComum):
-			raise ItemInutilException("Pedra Comum não pode ser armazenada!")
+			raise ItemInutilException("Pedra Comum não pode ser cagada!")
 		self.itens.append(objeto_item)
