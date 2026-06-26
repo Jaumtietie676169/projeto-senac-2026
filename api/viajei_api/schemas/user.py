@@ -13,3 +13,7 @@ class UserPublic(BaseModel):
 
 class UserDB(User):
     id: int
+
+
+class Userlist(BaseModel):
+    users: list[UserPublic]
