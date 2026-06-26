@@ -1,0 +1,2 @@
+class VeiculoGrandeException(Exception):
+    pass 

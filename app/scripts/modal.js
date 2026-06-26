@@ -15,5 +15,3 @@ export function openStoryModal(titulo, autor, historia) {
 
     modal.showModal();
 }
-
-

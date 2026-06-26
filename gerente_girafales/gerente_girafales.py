@@ -1,5 +1,5 @@
-from .Vaga import Vaga
-from .Veiculo import Veiculo
+from .vaga import Vaga
+from .veiculo import Veiculo
 from .erros.VeiculoGrandeException import VeiculoGrandeException
 from .erros.VagaIndisponivelException import VagaIndisponivelException
 
@@ -9,7 +9,6 @@ import datetime as dt
 class Estacionamento():
 
     vagas: list[Vaga | None] = [None] * 10
-
 
     def __init__(self, vagas: list):
         self.vagas = vagas
