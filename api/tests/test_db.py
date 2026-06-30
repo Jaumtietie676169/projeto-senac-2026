@@ -1,16 +1,23 @@
+from dataclasses import asdict
+
 from sqlalchemy import select
+from sqlalchemy.orm.session import Session
 
 from viajei_api.models import User
 
 
-def test_create_user(session):
-    new_user = User("joao@test.test", "senha123")
+def test_create_user(session: Session, mock_db_time):
+    with mock_db_time(model=User) as time:
+        new_user = User("joao@test.test", "senha123")
 
-    session.add(new_user)
-    session.commit()
+        session.add(new_user)
+        session.commit()
 
     user = session.scalar(select(User).where(User.email == "joao@test.test"))
 
-    breakpoint()
-
-    assert user.email == "joao"
+    assert asdict(user) == {
+        "id": 1,
+        "password": "senha123",
+        "email": "joao@test.test",
+        "created_at": time,
+    }

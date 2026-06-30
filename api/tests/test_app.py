@@ -49,3 +49,10 @@ def test_delete_user(client):
     # Then
     response.status_code = HTTPStatus.OK
     response.json() == {"message': 'User deleted!"}
+
+
+def test_error_404(client):
+    response = client.delete("/post/0")
+
+    assert response.status_code == HTTPStatus.NOT_FOUND
+    assert response.json() == {"detail": "Not Found"}
